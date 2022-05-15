@@ -1,0 +1,62 @@
+# mapping in block style
+key : value
+
+# key with spaces in quotes
+"data serialization language": yaml
+
+version: 1.0.0
+
+# block style
+block_list: # called as sequence in yaml
+  - py 
+  - java
+  - js
+  - perl
+  - php
+
+# flow style Method 1
+flow_list:
+  - [ py, java, js, php, perl]
+
+# nested list 
+nested_block_list:
+- - part
+  - of
+  - 1st
+  - list
+
+- - part
+  - of
+  - 2nd
+  - list
+
+# Mappings in flow style
+map2:
+  { key: value, another: value, flow_list: [a, b, c]}
+
+# Scalars in yaml
+tool: yaml
+versionid: 1.2 
+awesome: true
+nothing: null
+duplicateKeys: not allowed
+"duplicate keys": not allowed
+escape: "in yaml, she said: \" escaping can only be done within double quotes\""
+float: 1.2
+octal: 01212 # octal 
+hexadecimal: 0xABC
+
+boolean: false 
+---
+#end of the document
+
+key: value
+name: ak
+
+---
+another: document
+
+### end
+
+# Creating miltiline strings - folding and chomping
+ # Folding 
